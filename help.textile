@@ -1,0 +1,100 @@
+h1. *adi_notes* - Leave notes for Textpattern users
+
+This plugin gives you:
+
+* new tabs under Home, Content, Presentation and Admin to present your pearls of wisdom
+* public & private notes embedded in all Textpattern admin pages
+* a tab under Extensions, to set up *adi_notes*
+
+h2. *Installation*
+
+__Installation of *adi_notes* adds a new table to your Textpattern database which should not interfere with anything else. That said, if you are of a cautious frame of mind then I can thoroughly recommend "rss_admin_db_manager":http://forum.textpattern.com/viewtopic.php?id=10395 to do database backups before installation.__
+
+Once the plugin is installed and activated, go to its Options page and click "Install".
+
+h2. *Upgrading adi_notes*
+
+Although a backup of your notes will be made during the upgrade process it is recommended that you _make an independent copy as well_.
+
+When upgrading to version 1.3 or above, an attempt will be made to automatically convert custom styles into the new format - but it is advisable to _take a copy of your existing style_.
+
+h2. *adi_notes admin tab*
+
+Users with sufficient privileges will see the *adi_notes* admin tab under Extensions.  This gives you functionality to:
+
+* toggle note tab visibility on/off
+* set privilege levels of who can edit public notes
+* set privilege levels of who can use TXP tags in their private notes
+* change position of embedded notes
+* change note styles
+* choose between Textile or TinyMCE
+
+h2. *Public & Private*
+
+_Public_ notes are visible to all users but can only be added/edited by an Admin user (i.e. a user with sufficiently elevated privileges).  Public notes can either be note tabs or embedded notes.
+
+_Private_ notes can be added by all users (including "Admin users") but are only visible to the individual users. Private notes can only be embedded.
+
+By default, "Admin users" are Publishers & Managing Editors.  This may be changed in the *adi_notes* admin tab.
+
+h2. *Note contents*
+
+Notes can consist of anything that you can put in a article:
+
+* textiled text
+* HTML tags
+* TXP tags
+
+Tags will always be parsed in Note tabs and Public notes. The parsing of tags in private notes can be restricted according to privileges set in *adi_notes* admin.
+
+If you want to use @<txp:php>@ tags then _Allow PHP in pages?_ must be switched on in Preferences.
+
+h2. *Note tabs*
+
+Note tabs will appear under Home, Content, Presentation or Admin depending on the visibility set in *adi_notes* admin.  After installation, the Content Notes tab is switched on by default.  If you make the Home note tab visible then the Home tab itself will automatically appear.
+
+The Notes tabs are _public_, i.e. they will be visible to anyone who logs in to the Textpattern Admin interface.
+
+Notes made in note tabs can only be edited by an "Admin" user.
+
+h2. *Embedded notes*
+
+Embedded notes are available in all Textpattern admin pages. They appear either at the top or at bottom of the page.
+
+All users see public notes. Private notes are only visible to individual users.
+
+Only "Admin" users can add & edit public notes. All users can add & edit their own private notes.
+
+h2. *TinyMCE*
+
+To use the TinyMCE WYSIWYG editor, you can install it:
+
+* as part of the "hak_tinymce":http://forum.textpattern.com/viewtopic.php?id=13089 plugin
+* as a separate Javascript or jQuery package
+
+*adi_notes* will detect if the hak_tinymce plugin is installed.
+
+If you choose to install TinyMCE as a separate package then the path to the @tiny_mce@ directory must be specified (as a path relative to the __textpattern__ subdirectory) - the default is __../scripts/tiny_mce__, i.e. subdirectory __scripts__ at the same level as __textpattern__.
+
+Visit the *adi_notes* admin tab to see the various options.
+
+h2. *Notes about adi_notes*
+
+* Uninstalling *adi_notes* from the plugin options page will delete all notes from the Textpattern database
+* Note tab visibility simply controls whether the tabs can be seen in the specified areas.  Notes that are not visible are not deleted, just hidden. Embedded notes are always visible, however they may be removed by deleting the note contents
+* Add/Edit links will only be seen by those sufficiently elevated in the privilege department
+* By default, notes are formatted using Textile (see above for TinyMCE support)
+* Options that are set blank in the *adi_notes* admin tab (or in the case of privileges, all switched off) will revert to defaults
+* The parsing of TXP tags in private notes can be controlled in Notes Admin
+
+h2. *Textpack*
+
+To install the Textpack, go to the plugin's Options tab and click on "Install textpack".  This will copy & install it from a remote server. The number of language strings installed for your language will be displayed.
+
+If the Textpack installation fails (possibly due to an error accessing the remote site), the alternative is to click the "Textpack also available online":http://www.greatoceanmedia.com.au/textpack link.  This will take you to a website where the Textpack can be manually copied & pasted into the TXP Admin - Language tab.
+
+Additions and corrections to the Textpack are welcome - please use the "Textpack feedback":http://www.greatoceanmedia.com.au/textpack/?plugin=adi_notes form.
+
+h2(adi_extras). *Additional information*
+
+p(adi_extras). Support and further information can be obtained from the "Textpattern support forum":http://forum.textpattern.com/viewtopic.php?id=27957. A copy of this help is also available "online":http://www.greatoceanmedia.com.au/txp/?plugin=adi_notes.  More adi_plugins can be found "here":http://www.greatoceanmedia.com.au/txp/.
