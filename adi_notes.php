@@ -7,6 +7,7 @@
 	Released under the GNU Lesser General Public License
 
 	Version history:
+		1.4.1   - fix: stricter PHP 8 attribute order requirement
 		1.4		- fix: variable parsing
 				- fix: debug mode error
 				- fix: admin footer conflict (4.6)
