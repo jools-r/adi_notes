@@ -716,13 +716,13 @@ function adi_notes_admin($event, $step) {
 	}
 }
 
-function adi_notes_textarea($name, $thing = '', $id = '', $rows='5', $cols='40', $inline_style) {
+function adi_notes_textarea($name, $thing = '', $id = '', $rows='5', $cols='40', $inline_style = '') {
 // based on text_area() but with added inline style & without height & width
 
 	$id = ($id) ? ' id="'.$id.'"' : '';
 	$rows = ' rows="' . ( ($rows && is_numeric($rows)) ? $rows : '5') . '"';
 	$cols = ' cols="' . ( ($cols && is_numeric($cols)) ? $cols : '40') . '"';
-	$style = ($inline_style) ? ' style="'.$inline_style.'"' : '';
+	$style = !empty($inline_style) ? ' style="'.$inline_style.'"' : '';
 	return '<textarea'.$id.' name="'.$name.'"'.$rows.$cols.$style.'>'.txpspecialchars($thing).'</textarea>';
 }
 
